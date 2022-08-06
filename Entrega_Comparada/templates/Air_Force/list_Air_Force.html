@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Carga de productos
+{% endblock %}
+
+{% block contenido_que_cambia %}
+    {% for Air_Force in Air_Forces %}
+        <h2>Modelo: {{Air_Force.model}}</h2>
+        <h2>Precio: {{Air_Force.price}}</h2>
+        <h2>Color: {{Air_Force.coulor}}</h2>
+        <h2>Descripcion: {{Air_Force.description}}</h2>
+        <h2>Year: {{Air_Force.year}}</h2>
+        <h2>Stock: {{Air_Force.stock}}</h2>
+
+    {% endfor %}
+{% endblock %}
+

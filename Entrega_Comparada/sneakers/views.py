@@ -56,10 +56,10 @@ def add_Air_Force(request):
 
 
 def list_Air_Force(request):
-    Air_Force_ = Jordans.objects.all()
+    Air_Forces = Jordans.objects.all()
     print(len(Air_Force))
     context = {
-        'Air_Force_':Air_Force_
+        'Air_Forces':Air_Forces
     }
     return render(request, 'Air_Force/list_Air_Force.html', context=context)
 

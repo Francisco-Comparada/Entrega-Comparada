@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Carga de productos
+{% endblock %}
+
+{% block contenido_que_cambia %}
+    {% for jordan in jordans %}
+        <h2>Modelo: {{jordan.model}}</h2>
+        <h2>Precio: {{jordan.price}}</h2>
+        <h2>Color: {{jordan.coulor}}</h2>
+        <h2>Descripcion: {{jordan.description}}</h2>
+        <h2>Year: {{jordan.year}}</h2>
+        <h2>Stock: {{jordan.stock}}</h2>
+
+    {% endfor %}
+{% endblock %}
+
