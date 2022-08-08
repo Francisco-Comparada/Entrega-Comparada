@@ -16,11 +16,7 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href='{% static "css/fontawesome.min.css" %}'>
-    <title>
-        {% block titulo %}
-            titulo por defecto
-        {% endblock %}
-    </title>
+   
 <!--
     
 TemplateMo 559 Zay Shop
@@ -57,7 +53,7 @@ https://templatemo.com/tm-559-zay-shop
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="/index/">
                 <img src='{% static "img/favicon.ico" %}' alt="logoempresa" width="150" height="95">
             </a>
 
@@ -69,19 +65,20 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Home</a>
+                            <a class="nav-link" href="/index/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                            <a class="nav-link" href="/shop/">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
+                
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                         <div class="input-group">
@@ -94,13 +91,23 @@ https://templatemo.com/tm-559-zay-shop
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
+                    <form class="navbar-form navbar-right" action="/Sneaker/search_products/"method="GET">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search" name="search">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                              <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
                 </div>
             </div>
@@ -109,8 +116,6 @@ https://templatemo.com/tm-559-zay-shop
     </nav>
     <!-- Close Header -->
     {% block contenido_que_cambia %}
-    
-    {% endblock %}
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -149,7 +154,7 @@ https://templatemo.com/tm-559-zay-shop
                                 <h1 class="h1 text-success"><b>Urbans Sneaker</b></h1>
                                 <h3 class="h2"></h3>
                                 <p>
-                                   Somo una empresa dedicada a la venta de zapatillas unicas en el mercado 
+                                   Somos una empresa dedicada a la venta de zapatillas unicas en el mercado 
                                    <h6>By Francisco Comparada</h6>
                                 </p>
                             </div>
@@ -216,14 +221,14 @@ https://templatemo.com/tm-559-zay-shop
         </div>
         <div class="row">
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src='{% static "img/Nike_Air_Jordan.png" %}' class="rounded-circle img-fluid border"></a>
+                <a href="/sneakers/list_Jordans/"><img src='{% static "img/Nike_Air_Jordan.png" %}' class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3">Jordan</h5>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <p class="text-center"><a href="/sneakers/list_Jordans/" class="btn btn-success">Go Shop</a></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src='{% static "img/Nike_Air_Force.png" %}' class="rounded-circle img-fluid border"></a>
+                <a href="/sneakers/list_Air_Force/"><img src='{% static "img/Nike_Air_Force.png" %}' class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Air Force 1</h2>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <p class="text-center"><a href="/sneakers/list_Air_Force/" class="btn btn-success">Go Shop</a></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
                 <a href="#"><img src='{% static "img/Acesesorio.png" %}' class="rounded-circle img-fluid border"></a>
@@ -324,8 +329,8 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </section> -->
     <!-- End Featured Product -->
-
-
+    {% endblock %}
+        
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -352,8 +357,8 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Productos</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Jordan</a></li>
-                        <li><a class="text-decoration-none" href="#">Air Force 1</a></li>
+                        <li><a class="text-decoration-none" href="/sneakers/list_Jordans/">Jordan</a></li>
+                        <li><a class="text-decoration-none" href="/sneakers/list_Air_Force/">Air Force 1</a></li>
                         <li><a class="text-decoration-none" href="#">Accesorios </a></li>
                        <!--  <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
                         <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
@@ -416,7 +421,7 @@ https://templatemo.com/tm-559-zay-shop
                 </div>
             </div>
         </div>
-
+        
     </footer>
     <!-- End Footer -->
 

@@ -7,6 +7,7 @@ class Formulario_Jordans (forms.Form):
     description=forms.CharField(max_length=400)
     year=forms.IntegerField()
     stock=forms.IntegerField()
+    img= forms.ImageField()
     
 class Formulario_Air_Force (forms.Form):
     model=forms.CharField(max_length=40)
@@ -15,3 +16,5 @@ class Formulario_Air_Force (forms.Form):
     description=forms.CharField(max_length=400)
     year=forms.IntegerField()
     stock=forms.IntegerField()
+    img= forms.ImageField()
+ 
