@@ -70,8 +70,6 @@ def list_Air_Force(request):
 
 def search_products(request):
     search = request.GET['search']
-   # sneakers_air_force = Air_Force.objects.filter(model__icontains=search)
     sneakers_jordans = Jordans.objects.filter(model__icontains=search)
-   # context = {'sneakers_air_force':sneakers_air_force}
-    context = {' sneakers_jordans': sneakers_jordans}
-    return render(request, 'Sneaker/search_products.html', context=context)
+    context = {'sneakers_jordans': sneakers_jordans}
+    return render(request, 'Jordans/search_products.html', context=context)

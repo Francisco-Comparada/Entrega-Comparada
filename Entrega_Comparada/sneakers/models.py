@@ -23,3 +23,6 @@ class Air_Force(models.Model):
 def __str__(self):
         return self.model
 
+class Meta:
+    verbose_name = 'Jordan'
+    verbose_name_plural = 'Jordans'
