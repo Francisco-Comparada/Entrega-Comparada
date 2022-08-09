@@ -8,7 +8,6 @@ class Jordans(models.Model):
     price=models.IntegerField()
     coulor=models.CharField(max_length=40)
     description=models.CharField(max_length=400,null=True)
-    year=models.IntegerField(null=True)
     stock=models.IntegerField(null=True)
     img= models.ImageField(null=True, upload_to='Entrega_Comparada/static/img_produts/')
 
@@ -17,7 +16,6 @@ class Air_Force(models.Model):
     price=models.IntegerField()
     coulor=models.CharField(max_length=40)
     description=models.CharField(max_length=400,null=True)
-    year=models.IntegerField(null=True)
     stock=models.IntegerField(null=True)
     img= models.ImageField(null=True, upload_to='Entrega_Comparada/static/img_produts/')
 
@@ -39,3 +37,6 @@ class Meta:
 class Meta:
     verbose_name = 'Air force'
     verbose_name_plural = 'Air forces'
+class Meta:
+    verbose_name = 'Accessorie'
+    verbose_name_plural = 'Accessories'

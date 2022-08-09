@@ -15,7 +15,6 @@ def add_Jordans(request):
                 price=form.cleaned_data['price'],
                 coulor=form.cleaned_data['coulor'],
                 description=form.cleaned_data['description'],
-                year=form.cleaned_data['year'],
                 stock = form.cleaned_data['stock'],
                 img = form.cleaned_data['img'],
             )
@@ -47,7 +46,6 @@ def add_Air_Force(request):
                 price=form.cleaned_data['price'],
                 coulor=form.cleaned_data['coulor'],
                 description=form.cleaned_data['description'],
-                year=form.cleaned_data['year'],
                 stock = form.cleaned_data['stock'],
                 img = form.cleaned_data['img'],
             )
