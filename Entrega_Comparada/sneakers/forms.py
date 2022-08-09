@@ -18,3 +18,9 @@ class Formulario_Air_Force (forms.Form):
     stock=forms.IntegerField()
     img= forms.ImageField()
  
+class Formulario_Accessories(forms.Form):
+    name=forms.CharField(max_length=40)
+    price=forms.IntegerField()
+    description=forms.CharField(max_length=400)
+    stock=forms.IntegerField()
+    img= forms.ImageField()

@@ -1,6 +1,7 @@
+from re import search
 from django.shortcuts import render, redirect
-from sneakers.forms import Formulario_Air_Force, Formulario_Jordans
-from sneakers.models import Jordans, Air_Force
+from sneakers.forms import Formulario_Air_Force, Formulario_Jordans, Formulario_Accessories
+from sneakers.models import Jordans, Air_Force,Accessories
 
 
 #Jordans
@@ -70,6 +71,41 @@ def list_Air_Force(request):
 
 def search_products(request):
     search = request.GET['search']
-    sneakers_jordans = Jordans.objects.filter(model__icontains=search)
+    sneakers_jordans =Jordans.objects.filter(model__icontains=search)
     context = {'sneakers_jordans': sneakers_jordans}
-    return render(request, 'Jordans/search_products.html', context=context)
+    return render(request, 'search_products.html', context=context)
+    
+def search_products_Air_Force(request):
+    search = request.GET['search']
+    sneakers_air_forces = Air_Force.objects.filter(model__icontains=search)
+    context = {'sneakers_air_forces': sneakers_air_forces}
+    return render(request, 'search_products_Air_Force.html', context=context) 
+
+
+# Accessories
+def add_Accessories(request):  
+    if request.method == 'POST':
+        form = Formulario_Accessories(request.POST,request.FILES)
+        if form.is_valid():
+            add_Accessories = Accessories.objects.create (
+                model=form.cleaned_data['model'],
+                price=form.cleaned_data['price'],
+                description=form.cleaned_data['description'],
+                stock = form.cleaned_data['stock'],
+                img = form.cleaned_data['img'],
+            )
+            return redirect(list_Accessories)
+            
+    elif request.method == 'GET':
+        form = Formulario_Accessories()
+        context = {'form':form}
+        return render(request, 'Accessories/add_Accessories.html', context=context)
+
+
+def list_Accessories(request):
+    Accessories_ = Accessories.objects.all()
+    print(len(Accessories_))
+    context = {
+        'Accessories_':Accessories_
+    }
+    return render(request, 'Accessories/list_Accessories.html', context=context)
