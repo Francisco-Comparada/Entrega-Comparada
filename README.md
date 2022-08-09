@@ -3,26 +3,26 @@ Preentrega tp final coderhouse
  Realizacion de una pagina web (eCommerce) sobre zapatillas urbanas 
 
 Requerimientos para obtener una copia del codigo completo y funcionando 
-    Ver -> Requirements.txt
+         Ver -> Requirements.txt
 
 Correr codigo en Visual Studio Code 
-    1- Clonar codigo via git
-        . git init
-        . git clone https://github.com/Francisco-Comparada/Entrega-Comparada.git
-    2- Tener instalados en su respectiva version
-        .Django       4.0.6
-        .Pillow       9.2.0
-    3- Correr local servidor 
-        .python manage.py runserver    
+        1- Clonar codigo via git
+            . git init
+            . git clone https://github.com/Francisco-Comparada/Entrega-Comparada.git
+        2- Tener instalados en su respectiva version
+            .Django       4.0.6
+            .Pillow       9.2.0
+        3- Correr local servidor 
+            .python manage.py runserver    
 
 urls
-    admin/ 'Panel del administrador, se necesita un usuario y contraseña para ingresar. El cual lo podemos crear con "python manage.py createsuperuser", en este url podremos administrar los usuarios(AUTHENTICATION AND AUTHORIZATION),
-    y los productos. Como por ejemplo agregar, eliminar o editar
+        admin/ 'Panel del administrador, se necesita un usuario y contraseña para ingresar. El cual lo podemos crear con "python manage.py createsuperuser", en este url podremos administrar los usuarios(AUTHENTICATION AND AUTHORIZATION),
+        y los productos. Como por ejemplo agregar, eliminar o editar
 
-    index/ url de la pagina de inicio, aca veremos una pagina de inicio en la cual tendremos la posibilidad de acceder a las demas url haciendo clik en las diferentes opciones 
+        index/ url de la pagina de inicio, aca veremos una pagina de inicio en la cual tendremos la posibilidad de acceder a las demas url haciendo clik en las diferentes opciones 
 
 
-    shop/ Url que hereda parte del index/, aca veremos las categorias de productos que tenemos contando con la opcion de hacer click en cualquiera de ellos y dirigirte a la categoria seleccionada 
+        shop/ Url que hereda parte del index/, aca veremos las categorias de productos que tenemos contando con la opcion de hacer click en cualquiera de ellos y dirigirte a la categoria seleccionada 
 
 
     sneakers/ varias opciones 
@@ -52,14 +52,14 @@ urls
 Para la parte visual (frontEnd) de la pagina se uso una plantilla descargada https://templatemo.com/ la cual contiene css, jv, img, webfonts y los html usados, fueron modificados a gusto para poder utiliarlos. Con esto quedando una pagina mas agradable a la vista e intuitiva para el uso. Fue modificado settings.py para el uso de estos 
 
 Proximos cambios a realizar 
- Agregar urls para cada producto en la cual mostrar todos sus datos 
- Agregar about, contact
- Agregar la subida de prodctos con verificacion de usuario 
- Completar el footer con todos sus links 
- Agregar Carrito 
- Agregar usuarios 
- Mejorar visual del shop 
- 
+        Agregar urls para cada producto en la cual mostrar todos sus datos 
+        Agregar about, contact
+        Agregar la subida de prodctos con verificacion de usuario 
+        Completar el footer con todos sus links 
+        Agregar Carrito 
+        Agregar usuarios 
+        Mejorar visual del shop 
+
 
 
 
