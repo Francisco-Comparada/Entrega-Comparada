@@ -9,7 +9,7 @@ class Jordans(models.Model):
     coulor=models.CharField(max_length=40)
     description=models.CharField(max_length=400,null=True)
     stock=models.IntegerField(null=True)
-    img= models.ImageField(null=True, upload_to='Entrega_Comparada/static/img_produts/')
+    img= models.ImageField(null=True, upload_to='img_Jordan/')
 
 class Air_Force(models.Model):
     model=models.CharField(max_length=40)
@@ -17,14 +17,14 @@ class Air_Force(models.Model):
     coulor=models.CharField(max_length=40)
     description=models.CharField(max_length=400,null=True)
     stock=models.IntegerField(null=True)
-    img= models.ImageField(null=True, upload_to='Entrega_Comparada/static/img_produts/')
+    img= models.ImageField(null=True, upload_to='img_Air_Force/')
 
 class Accessories(models.Model):
     name=models.CharField(max_length=40)
     price=models.IntegerField()
     description=models.CharField(max_length=400,null=True)
     stock=models.IntegerField(null=True)
-    img= models.ImageField(null=True, upload_to='Entrega_Comparada/static/img_produts/')
+    img= models.ImageField(null=True, upload_to='img_Accessories/')
 
 
 def __str__(self):
