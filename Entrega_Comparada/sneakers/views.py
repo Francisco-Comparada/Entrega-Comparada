@@ -1,4 +1,5 @@
 from re import search
+from unicodedata import name
 from django.shortcuts import render, redirect
 from sneakers.forms import Formulario_Air_Force, Formulario_Jordans, Formulario_Accessories
 from sneakers.models import Jordans, Air_Force,Accessories
@@ -88,7 +89,7 @@ def add_Accessories(request):
         form = Formulario_Accessories(request.POST,request.FILES)
         if form.is_valid():
             add_Accessories = Accessories.objects.create (
-                model=form.cleaned_data['model'],
+                name=form.cleaned_data['name'],
                 price=form.cleaned_data['price'],
                 description=form.cleaned_data['description'],
                 stock = form.cleaned_data['stock'],
