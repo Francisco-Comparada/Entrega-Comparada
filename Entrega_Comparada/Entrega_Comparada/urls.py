@@ -6,9 +6,10 @@ from Entrega_Comparada.views import index, shop
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('',index),
     path('index/',index),
     path('shop/',shop),
     
-    path('sneakers/', include('sneakers.urls')),
+    path('sneakers/', include('sneakers.urls')),#incluye todas las url que estan en sneakers
 ]
