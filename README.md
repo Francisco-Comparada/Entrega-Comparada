@@ -6,6 +6,7 @@ Requerimientos para obtener una copia del codigo completo y funcionando
          Ver -> Requirements.txt
 
 Correr codigo en Visual Studio Code 
+
         1- Clonar codigo via git
             . git init
             . git clone https://github.com/Francisco-Comparada/Entrega-Comparada.git
@@ -16,6 +17,7 @@ Correr codigo en Visual Studio Code
             .python manage.py runserver    
 
 urls
+
         admin/ 'Panel del administrador, se necesita un usuario y contraseña para ingresar. El cual lo podemos crear con "python manage.py createsuperuser", en este url podremos administrar los usuarios(AUTHENTICATION AND AUTHORIZATION),
         y los productos. Como por ejemplo agregar, eliminar o editar
 
@@ -52,6 +54,8 @@ urls
 Para la parte visual (frontEnd) de la pagina se uso una plantilla descargada https://templatemo.com/ la cual contiene css, jv, img, webfonts y los html usados, fueron modificados a gusto para poder utiliarlos. Con esto quedando una pagina mas agradable a la vista e intuitiva para el uso. Fue modificado settings.py para el uso de estos 
 
 Proximos cambios a realizar 
+
+
         Agregar urls para cada producto en la cual mostrar todos sus datos 
         Agregar about, contact
         Agregar la subida de prodctos con verificacion de usuario 
