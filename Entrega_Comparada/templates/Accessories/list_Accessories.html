@@ -17,7 +17,8 @@
 
 
                             <!-- Aprender a mostrar imagenes cargadas en formularios  -->
-                            <img class="card-img rounded-0 img-fluid" src='{{ Accessorie.img.url }}'alt='imagen de producto {{Accessorie.name}}'>
+                            <a href="/sneakers/Shop_single_Accessories/{{Accessorie.id}}"><img class="card-img rounded-0 img-fluid" src='{{ Accessorie.img.url }}'alt='imagen de producto {{Accessorie.name}}'></a>
+                            
 
 
 
@@ -32,7 +33,7 @@
                         <div class="card-body">
                             <a href="#" class="h3 text-decoration-none"><strong>{{Accessorie.name}}</strong></a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <p class="text-center"><a href="#" class="btn btn-success">Precio: ${{Accessorie.price}}</a></p>
+                                <p class="text-center"><a href="/sneakers/Shop_single_Accessories/{{Accessorie.id}}" class="btn btn-success">Precio: ${{Accessorie.price}}</a></p>
                                 <li class="pt-2">
                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>

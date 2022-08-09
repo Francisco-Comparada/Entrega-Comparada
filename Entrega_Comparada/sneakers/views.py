@@ -33,6 +33,21 @@ def list_Jordans(request):
         'jordans':jordans
     }
     return render(request, 'Jordans/list_Jordans.html', context=context)
+
+
+def Shop_single_Jordans(request, pk):
+    if request.method == 'GET':
+        jordans = Jordans.objects.get(pk=pk)
+        context = {'jordans':jordans}
+        return render(request, 'jordans/Shop_single_Jordans.html', context=context)
+        #para cuando use el boton buy o add to cart
+    elif request.method == 'POST':
+        jordans = Jordans.objects.get(pk=pk)
+        return redirect('Jordans/list_Jordans.html')
+
+
+
+
 #Jordans
 
 
@@ -64,6 +79,17 @@ def list_Air_Force(request):
         'air_forces':air_forces
     }
     return render(request, 'Air_Force/list_Air_Force.html', context=context)
+
+def Shop_single_Air_Force(request, pk):
+    if request.method == 'GET':
+        air_forces = Air_Force.objects.get(pk=pk)
+        context = {'air_forces':air_forces}
+        return render(request, 'Air_Force/Shop_single_Air_Force.html', context=context)
+        #para cuando use el boton buy o add to cart
+    elif request.method == 'POST':
+        air_forces = Air_Force.objects.get(pk=pk)
+        return redirect('Air_Force/list_air_forces.html')
+
     
 
 # Accessories
@@ -93,6 +119,16 @@ def list_Accessories(request):
         'Accessories_':Accessories_
     }
     return render(request, 'Accessories/list_Accessories.html', context=context)
+
+def Shop_single_Accessories(request, pk):
+    if request.method == 'GET':
+        Accessorie = Accessories.objects.get(pk=pk)
+        context = {'Accessorie':Accessorie}
+        return render(request, 'Accessories/Shop_single_Accessories.html', context=context)
+        #para cuando use el boton buy o add to cart
+    elif request.method == 'POST':
+        Accessorie = Accessories.objects.get(pk=pk)
+        return redirect('Accessories/list_Accessories.html')
 
 #Search Jordans Air Force Accessories 
 
