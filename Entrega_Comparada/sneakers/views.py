@@ -64,22 +64,7 @@ def list_Air_Force(request):
         'air_forces':air_forces
     }
     return render(request, 'Air_Force/list_Air_Force.html', context=context)
-
-
-
-
-def search_products(request):
-    search = request.GET['search']
-    sneakers_jordans =Jordans.objects.filter(model__icontains=search)
-    context = {'sneakers_jordans': sneakers_jordans}
-    return render(request, 'search_products.html', context=context)
     
-def search_products_Air_Force(request):
-    search = request.GET['search']
-    sneakers_air_forces = Air_Force.objects.filter(model__icontains=search)
-    context = {'sneakers_air_forces': sneakers_air_forces}
-    return render(request, 'search_products_Air_Force.html', context=context) 
-
 
 # Accessories
 def add_Accessories(request):  
@@ -108,3 +93,17 @@ def list_Accessories(request):
         'Accessories_':Accessories_
     }
     return render(request, 'Accessories/list_Accessories.html', context=context)
+
+#Search Jordans Air Force Accessories 
+
+def search_products(request):
+    search = request.GET['search']
+    sneakers_jordans =Jordans.objects.filter(model__icontains=search)
+    sneakers_air_forces = Air_Force.objects.filter(model__icontains=search)
+    Accessories_ = Accessories.objects.filter(name__icontains=search)
+    context = {
+        'sneakers_jordans': sneakers_jordans,
+        'sneakers_air_forces': sneakers_air_forces,
+        'Accessories_':Accessories_
+    }
+    return render(request, 'search_products.html', context=context)
