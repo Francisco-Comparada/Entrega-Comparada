@@ -49,7 +49,17 @@ urls
         url que se encarga de buscar un producto, escribiendo en caso de las zapatillas su modelo y en caso de los accesorios su nombre, hace una busqueda general por todos los productos que hay en el ecommerce y los muestra en un listado con alguno de sus datos. Para aceder a esta opcion debemos apretar en la lupa de la pagina web 
 
 
-Para la parte visual (frontEnd) de la pagina se uso una plantilla descargada https://templatemo.com/ la cual contiene css, jv, img, webfonts y los html usados, fueron modificados a gusto para poder utiliarlos. Con esto quedando una pagina mas agradable a la vista e intuitiva para el uso.
+Para la parte visual (frontEnd) de la pagina se uso una plantilla descargada https://templatemo.com/ la cual contiene css, jv, img, webfonts y los html usados, fueron modificados a gusto para poder utiliarlos. Con esto quedando una pagina mas agradable a la vista e intuitiva para el uso. Fue modificado settings.py para el uso de estos 
+
+Proximos cambios a realizar 
+ Agregar urls para cada producto en la cual mostrar todos sus datos 
+ Agregar about, contact
+ Agregar la subida de prodctos con verificacion de usuario 
+ Completar el footer con todos sus links 
+ Agregar Carrito 
+ Agregar usuarios 
+ Mejorar visual del shop 
+ 
 
 
 
